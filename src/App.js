@@ -30,31 +30,33 @@ class App extends React.Component {
                   <li className="card-email" key={index}>Email: {data.email}</li>
                   <li className="card-passwords" key={index}>Contraseñas: 
                     <ul className="passwords-list"> 
-                    {data.passwords.map(password => {
+                    {data.passwords.map((password, indexPassword) => {
                       return(
                       <React.Fragment>
-                        <li className="passwords__list" key={index}>{password}</li>
+                        <li className="passwords__list" key={indexPassword}>{password}</li>
                       </React.Fragment>
                     )})}
                     </ul>
                   </li>
                   
-                  {/* <li className="card-bank" key={index}>
+                  <li className="card-bank" key={index}>
+                    Banco:
                     <ul className="card-bank-list"> 
-                    
-                    
-                     {data.bank.map((item, index) =>{
-                        return (
-                          <div>
-                            <li className="bank__list-iban" key={index}>{item.iban}
+                     {/* {data.bank.map((item, indexBank) =>{
+                        return ( */}
+                          <React.Fragment>
+                            <li className="bank__list-iban" key={index}>
+                            iban: {data.bank.iban}
                             </li>
-                            <li className="bank__list-pin" key={index}>{item.pin}
+                            <li className="bank__list-pin" key={index}>
+                            pin: {data.bank.pin}
                             </li>
-                          </div> 
-                        ); 
-                    } )} 
-                    </ul>
-                  </li> */}
+                          </React.Fragment> 
+                        {/* ); 
+                        })
+                      }  */}
+                    </ul> 
+                  </li>
                 </div>
               )
             }

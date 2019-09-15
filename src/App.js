@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import data from './data';
-import {isTemplateElement} from '@babel/types';
+import Header from './components/Header'
 // import Page from './components/Page';
 
 class App extends React.Component {
@@ -17,10 +17,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Header />
         {/* <Page data={this.state.data}/> */}
-        <header className="app-header">
-        <h1 className="header-title">Legion of Hell</h1>
-        </header>
+        
         <main>
           <ul className="data-list">
             {data.map((data, index) =>{

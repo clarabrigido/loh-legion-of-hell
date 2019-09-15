@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import data from './data';
-import Header from './components/Header'
-// import Page from './components/Page';
+// import Header from './components/Header';
+import Page from './components/Page';
+// import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,54 +18,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        {/* <Page data={this.state.data}/> */}
-        
-        <main>
-          <ul className="data-list">
-            {data.map((data, index) =>{
-              return (
-                <div className="data-card" >
-                  <li className="card-name" key={index}>Nombre: {data.name}</li>
-                  <li className="card-email" key={index}>Email: {data.email}</li>
-                  <li className="card-passwords" key={index}>Contraseñas: 
-                    <ul className="passwords-list"> 
-                    {data.passwords.map((password, indexPassword) => {
-                      return(
-                      <React.Fragment>
-                        <li className="passwords__list" key={indexPassword}>{password}</li>
-                      </React.Fragment>
-                    )})}
-                    </ul>
-                  </li>
-                  
-                  <li className="card-bank" key={index}>
-                    Banco:
-                    <ul className="card-bank-list"> 
-                     {/* {data.bank.map((item, indexBank) =>{
-                        return ( */}
-                          <React.Fragment>
-                            <li className="bank__list-iban" key={index}>
-                            iban: {data.bank.iban}
-                            </li>
-                            <li className="bank__list-pin" key={index}>
-                            pin: {data.bank.pin}
-                            </li>
-                          </React.Fragment> 
-                        {/* ); 
-                        })
-                      }  */}
-                    </ul> 
-                  </li>
-                </div>
-              )
-            }
-            )}
-          </ul>
-        </main>
-        <footer className="app-footer">
-        <h2 className="footer-title">loh();</h2> 
-        </footer>
+    
+        <Page data={this.state.data}/>
+       
       </div>
     );
   }

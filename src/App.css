@@ -63,3 +63,8 @@
 .data-card > li{
   list-style: none;
 }
+
+.box{
+  flex-direction: column;
+  margin: 20px;
+}

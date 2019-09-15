@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import data from './data';
-// import Header from './components/Header';
 import Page from './components/Page';
-// import Footer from './components/Footer';
+
 
 class App extends React.Component {
   constructor(props) {
